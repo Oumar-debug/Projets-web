@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>exemple court</title>
+</head>
+<body>
+    <form id="form" >
+        Entrez votre nom:
+        <input id="nom" type="text" name="fname">
+        <input type="submit" value="Valider">
+    </form>
+        <p id="paragraphe"></p>
+        <script>
+        document.getElementById("form") . addEventListener("submit", function(e){
+        e.preventDefault();
+        var nom = document.getElementById( 'nom'). value;
+        document . getElementById ("paragraphe") .innerHTML = "Bienvenue: " + nom; } );
+        
+        </script>
+</body>
+</html>

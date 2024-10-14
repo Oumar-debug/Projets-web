@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Style pour l'en-tête */
+        h1, h2, h3 {
+            color: #ff0000; /* Rouge pour les titres */
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-top: 20px;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        /* Style pour le conteneur de l'en-tête */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 2px solid #ff0000; /* Ajoute un cadre rouge autour de l'en-tête */
+            border-radius: 8px; /* Arrondir les coins du cadre */
+            margin: 20px auto;
+            width: 90%;
+        }
+
+        /* Style pour l'image du logo */
+        .logo img {
+            max-width: 150px;
+        }
+
+        /* Style pour les liens de navigation */
+        .nav-links a {
+            color: #ff0000; /* Rouge pour les liens de navigation */
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        .nav-links a:hover {
+            color: #ff6600;
+        }
+
+        /* Style pour les images */
+        img {
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        /* Style pour les tableaux */
+        table {
+            width: 80%;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Style pour les petits textes */
+        small {
+            color: #666;
+        }
+
+        /* Style du formulaire */
+        form {
+            background-color: #e6f2ff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+            margin: auto;
+            margin-top: 30px;
+        }
+
+        label, input, select {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="number"],
+        select {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: #ff0000; /* Bouton en rouge */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #cc0000; /* Rouge plus foncé au survol */
+        }
+
+        /* Pied de page */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ff0000; /* Pied de page en rouge */
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo">
+            <img src="c:\Users\keita\Downloads\esprit logo.png" alt="Esprit logo">
+        </div>
+        <div class="nav-links">
+            <a href="#">Travel offers</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Dashboard</a>
+        </div>
+    </div>
+
+    <center><h1><strong>TRAVEL BOOKING</strong></h1></center>
+    <center><p>Family Trips - Couples' Trips - Adventure and Sports Trips</p></center>
+
+ 
+    <center><h2><strong>TRAVEL OFFERS</strong></h2></center>
+    <table>
+        <tr>
+            <td><img src="c:\Users\keita\Downloads\cabin.png" alt="cabin" width="50%"></td>
+            <td><img src="c:\Users\keita\Downloads\circus.png" alt="circus" width="50%"></td>
+            <td><img src="c:\Users\keita\Downloads\submarine.png" alt="submarine" width="50%"></td>
+        </tr>
+    </table>
+
+    
+    <center><h3><strong>ABOUT</strong></h3></center>
+    <small>A travel agency specializing in customized holidays wants to modernize its online booking system. Currently, customers have to contact the agency by phone or e-mail to book their trips, resulting in delays and inefficiencies. The agency needs an online solution that will enable customers to browse offers, personalize their trips, and book autonomously.</small>
+    <br><br>
+    <small>You can contact us at: <a href="mailto:contact@esprit.tn">contact@esprit.tn</a></small>
+    <br>
+    <small>1, 2 rue André Ampère-2083, Technological Pole-El Ghazala</small>
+
+    <!-- Formulaire d'ajout de voyage -->
+    <center><h1><strong>Add a Travel</strong></h1></center>
+    <form id="travelOfferForm">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required minlength="3">
+
+        <label for="destination">Destination:</label>
+        <input type="text" id="destination" name="destination" required minlength="3" pattern="[A-Za-z\s]+" title="Veuillez entrer au moins 3 lettres (espaces autorisés).">
+
+        <label for="departureDate">Departure Date:</label>
+        <input type="date" id="departureDate" name="departureDate" required>
+
+        <label for="returnDate">Return Date:</label>
+        <input type="date" id="returnDate" name="returnDate" required>
+
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" required min="0" step="0.01">
+
+        <label for="category">Category:</label>
+        <select id="category" name="category" required>
+            <option value="">-- Select a category --</option>
+            <option value="adventure">Adventure</option>
+            <option value="relaxation">Relaxation</option>
+            <option value="culture">Culture</option>
+            <option value="romantic">Romantic</option>
+        </select>
+
+        <label for="availability">Availability:</label>
+        <input type="checkbox" id="availability" name="availability">
+
+        <input type="submit" value="Add offer">
+    </form>
+
+    <!-- Pied de page -->
+    <footer>
+        <small>Copyright © Your Website 2024</small>
+    </footer>
+
+</body>
+</html>
